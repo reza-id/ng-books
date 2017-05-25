@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksListComponent implements OnInit {
 
+  imageWidth: number = 100;
+  bookAuthor: string = 'Tom Jones';
+  bookTitle: string = 'War and Peace 2';
+  bookPrice: string = '$29.95';
+  bookDescription: string = 'Book of historical fiction';
+  bookReviews: number = 15;
+  bookImageUrl: string = 'assets/images/656.jpg';
+
   constructor() { }
 
   ngOnInit() {
