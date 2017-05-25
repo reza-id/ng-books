@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksListComponent implements OnInit {
 
+  showImage: boolean = true;
+
   imageWidth: number = 100;
   bookAuthor: string = 'Tom Jones';
   bookTitle: string = 'War and Peace 2';
@@ -18,6 +20,10 @@ export class BooksListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleImage(): void {
+    this.showImage = !this.showImage;
   }
 
 }
