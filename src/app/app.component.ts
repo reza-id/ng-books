@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   appTitle = 'Dev Book Store';
+  searchBox: string = '';
 }
