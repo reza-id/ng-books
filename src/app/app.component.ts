@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
   <h1>{{appTitle}}</h1>
   <div>App Component Test</div>
+  <bs-welcome></bs-welcome>
   `
 })
 export class AppComponent {
