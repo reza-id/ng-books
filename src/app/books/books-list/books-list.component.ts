@@ -33,26 +33,26 @@ export class BooksListComponent implements OnInit, OnChanges {
       hardcover: false
     },{
       bookAuthor: 'Tom Jones',
-      bookTitle: 'War and Peace 2',
+      bookTitle: 'War and Peace 3',
       bookPrice: 29.95,
       bookDescription: 'Book of historical fiction',
-      bookReviews: 15,
+      bookReviews: 18,
       publishedOn: new Date('02/11/1921'),
       bookImageUrl: 'assets/images/656.jpg',
       bookInStock: 'yes'
     },{
       bookAuthor: 'Tom Jones',
-      bookTitle: 'War and Peace 2',
+      bookTitle: 'War and Peace 4',
       bookPrice: 29.95,
       bookDescription: 'Book of historical fiction',
-      bookReviews: 15,
+      bookReviews: 27,
       publishedOn: new Date('02/11/1921'),
       bookImageUrl: 'assets/images/656.jpg',
       bookInStock: 'yes'
     }
   ];
 
-  showMessage: string = 'test';
+  favoriteMessage: string = '';
   showImage: boolean = true;
   imageWidth: number = 100;
   animals: string[] =['zebra', 'moose'];  
@@ -76,8 +76,8 @@ export class BooksListComponent implements OnInit, OnChanges {
     this.showImage = !this.showImage;
   }
 
-  onNotifyClicked(message: string): void {
-    this.showMessage = message;
+  onFavoriteClicked(message: string): void {
+    this.favoriteMessage = message;
   }
 
 }
