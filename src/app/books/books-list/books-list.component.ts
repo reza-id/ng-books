@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
+// import { IBook } from '../book';
 
 interface IBook {
   bookAuthor: string;
@@ -17,7 +18,7 @@ interface IBook {
   templateUrl: './books-list.component.html',
   styleUrls: ['./books-list.component.css']
 })
-export class BooksListComponent implements OnInit {
+export class BooksListComponent implements OnInit, OnChanges {
 
   books: IBook[] = [
     {
@@ -53,11 +54,21 @@ export class BooksListComponent implements OnInit {
 
   showImage: boolean = true;
   imageWidth: number = 100;
-  
+  animals: string[] =['zebra', 'moose'];  
 
   constructor() { }
 
   ngOnInit() {
+    console.log('inside OnInit');
+  }
+
+  ngOnChanges() {
+    console.log('new change detected');
+  }
+
+  changeMethod(): void {
+    this.animals = ['dog', 'cat'];
+    console.log('change method happened', this.animals);
   }
 
   toggleImage(): void {
