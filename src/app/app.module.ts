@@ -11,6 +11,7 @@ import { HighlightDirective } from './shared/hightlight.directive';
 import { TruncatePipe } from './shared/pipes/truncate.pipe';
 import { FavoriteComponent } from './favorites/favorite.component';
 import { BookService } from './books/book.service';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BookService } from './books/book.service';
     BookDetailsComponent,
     HighlightDirective,
     TruncatePipe,
-    FavoriteComponent
+    FavoriteComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
