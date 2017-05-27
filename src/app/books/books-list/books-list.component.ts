@@ -7,15 +7,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksListComponent implements OnInit {
 
-  showImage: boolean = true;
+  books: any[] = [
+    {
+      bookAuthor: 'Tom Jones',
+      bookTitle: 'War and Peace 2',
+      bookPrice: '$29.95',
+      bookDescription: 'Book of historical fiction',
+      bookReviews: 15,
+      bookImageUrl: 'assets/images/656.jpg',
+      bookInStock: 2
+    },{
+      bookAuthor: 'Tom Jones',
+      bookTitle: 'War and Peace 2',
+      bookPrice: '$29.95',
+      bookDescription: 'Book of historical fiction',
+      bookReviews: 15,
+      bookImageUrl: 'assets/images/656.jpg',
+      bookInStock: 2
+    },{
+      bookAuthor: 'Tom Jones',
+      bookTitle: 'War and Peace 2',
+      bookPrice: '$29.95',
+      bookDescription: 'Book of historical fiction',
+      bookReviews: 15,
+      bookImageUrl: 'assets/images/656.jpg',
+      bookInStock: 2
+    }
+  ];
 
+  showImage: boolean = true;
   imageWidth: number = 100;
-  bookAuthor: string = 'Tom Jones';
-  bookTitle: string = 'War and Peace 2';
-  bookPrice: string = '$29.95';
-  bookDescription: string = 'Book of historical fiction';
-  bookReviews: number = 15;
-  bookImageUrl: string = 'assets/images/656.jpg';
+  
 
   constructor() { }
 
