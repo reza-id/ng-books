@@ -29,8 +29,8 @@ import { HomeComponent } from './pages/home/home.component';
     HttpModule,
     RouterModule.forRoot([
       { path: 'books', component: BooksListComponent },
-      { path: '', redirectTo: 'books', pathMatch: 'full' },
-      { path: '**', redirectTo: 'books', pathMatch: 'full' }
+      { path: '', component: HomeComponent },
+      { path: '**', redirectTo: '', pathMatch: 'full' }
     ])
   ],
   providers: [BookService],
