@@ -1,5 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
+interface IBook {
+  bookAuthor: string;
+  bookTitle: string;
+  bookPrice: number;
+  bookDescription: string;
+  bookReviews: number;
+  publishedOn: Date;
+  bookImageUrl: string;
+  bookInStock: string;
+  hardcover?: boolean;
+}
+
 @Component({
   selector: 'app-books-list',
   templateUrl: './books-list.component.html',
@@ -7,7 +19,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksListComponent implements OnInit {
 
-  books: any[] = [
+  books: IBook[] = [
     {
       bookAuthor: 'Tom Jones',
       bookTitle: 'War and Peace 2',
@@ -16,7 +28,8 @@ export class BooksListComponent implements OnInit {
       bookReviews: 15,
       publishedOn: new Date('02/11/1921'),
       bookImageUrl: 'assets/images/656.jpg',
-      bookInStock: 'yes'
+      bookInStock: 'yes',
+      hardcover: false
     },{
       bookAuthor: 'Tom Jones',
       bookTitle: 'War and Peace 2',
