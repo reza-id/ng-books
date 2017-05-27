@@ -14,18 +14,25 @@ export class BooksListComponent implements OnInit, OnChanges {
   favoriteMessage: string = '';
   showImage: boolean = true;
   imageWidth: number = 100;
-  animals: string[] =['zebra', 'moose'];  
+  animals: string[] =['zebra', 'moose'];
+  errorMessage: string;
 
-  constructor(private _bookService: BookService) {
-    this.books = _bookService.getBooks();
-  }
+  constructor(private _bookService: BookService) {}
 
   ngOnInit() {
-    console.log('inside OnInit');
+    this.getBooks();
   }
 
   ngOnChanges() {
     console.log('new change detected');
+  }
+
+  getBooks() {
+    this._bookService.getBooks()
+      .subscribe(
+        books => this.books = books,
+        error => this.errorMessage = <any>error
+      );
   }
 
   changeMethod(): void {
