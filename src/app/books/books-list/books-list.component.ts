@@ -3,7 +3,6 @@ import { IBook } from '../book';
 import { BookService } from '../book.service';
 
 @Component({
-  selector: 'app-books-list',
   templateUrl: './books-list.component.html',
   styleUrls: ['./books-list.component.css']
 })
