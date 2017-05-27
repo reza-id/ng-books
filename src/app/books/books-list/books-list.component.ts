@@ -52,6 +52,7 @@ export class BooksListComponent implements OnInit, OnChanges {
     }
   ];
 
+  showMessage: string = 'test';
   showImage: boolean = true;
   imageWidth: number = 100;
   animals: string[] =['zebra', 'moose'];  
@@ -73,6 +74,10 @@ export class BooksListComponent implements OnInit, OnChanges {
 
   toggleImage(): void {
     this.showImage = !this.showImage;
+  }
+
+  onNotifyClicked(message: string): void {
+    this.showMessage = message;
   }
 
 }
